@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Innovation Center</title>
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper" style="background-color: #3CB371;">
+                <a href="#" class="brand-logo" style="height: 100%;">
+                    <img src="assets/logo.jpg" alt="Logo" class="circle responsive-img"
+                        style="height: 100%;padding-top: 5px; padding-left: 15px;">
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="https://www.linkedin.com/in/your-profile">Connect on LinkedIn</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="title" id="pageTitle">Innovation Center</h1>
+            <div class="row">
+                <p class="flow-text mainText">Bringing ideas to life at the Innovation Center</p>
+            </div>
+            <div class="row center" style="height: 150px;">
+                <img src="assets/innovation.jpg" alt="Innovation Image" class="circle responsive-img"
+                    style="height: 100%;padding-top: 5px; padding-left: 15px;">
+            </div>
+            <div class="row center" style="padding-top:50px;">
+                <a id="addProjectButton" class="waves-effect waves-light btn-large modal-trigger" href="#modal1" style="background-color: #3CB371;">
+                    <i class="material-icons left" style="color:white; font-size:larger">emoji_objects</i>Add Your Idea</a>
+            </div>
+
+            <div class="container">
+                <div class="row" id="projectList">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2024 Innovation Center
+                <a class="grey-text text-lighten-4 right" href="https://github.com/your-repo">
+                    <img src="assets/git-logo.svg" style="height: 20px; padding-right: 15px;" alt="GitHub Logo">Source Code</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Socket.IO -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="env.js"></script>
+
+</body>
+
+</html>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Share Your Idea</h4>
+        <p>We are excited to hear from you!</p>
+        <div class="row">
+            <div class="input-field col s12">
+                <input value="" id="name" type="text" class="validate">
+                <label class="name" for="name">Your Name</label>
+            </div>
+            <div class="input-field col s12">
+                <input value="" id="projectTitle" type="text" class="validate">
+                <label class="title" for="projectTitle">Idea Title</label>
+            </div>
+            <div class="input-field col s12">
+                <input value="" id="projectDescription" type="text" class="validate">
+                <label class="description" for="projectDescription">Idea Description</label>
+            </div>
+            <div class="input-field col s12">
+                <input value="" id="videoLink" type="text" class="validate">
+                <label class="video" for="videoLink">Video URL</label>
+            </div>
+            <div class="input-field col s12">
+                <input value="" id="imageLink" type="text" class="validate">
+                <label class="image" for="imageLink">Image URL</label>
+            </div>
+        <
